@@ -23,7 +23,7 @@ public class BaseVectorShape {
 		setFaceAngle(0.0);
 	}
 	
-	// accesor methods:
+	// accessor methods:
 	public Shape getShape() {
 		return shape;
 	}

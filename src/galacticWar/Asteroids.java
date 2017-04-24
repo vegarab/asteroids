@@ -312,25 +312,25 @@ public class Asteroids extends Applet implements Runnable, KeyListener {
 		
 		switch(keyCode) {
 		case KeyEvent.VK_LEFT:
-			// left arrow rotates ship left 5 degrees
+			// left arrow rotates ship left 15 degrees
 			ship.incFaceAngle(-15);
 			if (ship.getFaceAngle() < 0)
 				ship.setFaceAngle(360-15);
 				break;
 		case KeyEvent.VK_RIGHT:
-			// right arrow rotates ship right 5 degrees
+			// right arrow rotates ship right 15 degrees
 			ship.incFaceAngle(15);
 			if (ship.getFaceAngle() > 360)
 				ship.setFaceAngle(15);
 				break;
 		case KeyEvent.VK_UP:
-			// up arrow adds thrust to ship (3/10 normal speed)
+			// up arrow adds thrust to ship (2/10 normal speed)
 			ship.setMoveAngle(ship.getFaceAngle() - 90);
 			ship.incVelX(calcAngleMoveX(ship.getMoveAngle()) * 0.2);
 			ship.incVelY(calcAngleMoveY(ship.getMoveAngle()) * 0.2);
 			break;
 		case KeyEvent.VK_DOWN:
-			// down arrow adds thrust to ship in opposite direction (3/10 normal speed)
+			// down arrow adds thrust to ship in opposite direction (2/10 normal speed)
 			ship.setMoveAngle(ship.getFaceAngle() - 90);
 			ship.incVelX(calcAngleMoveX(ship.getMoveAngle()) * -0.2);
 			ship.incVelY(calcAngleMoveY(ship.getMoveAngle()) * -0.2) ;
